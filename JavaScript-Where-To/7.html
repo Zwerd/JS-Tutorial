@@ -3,23 +3,26 @@
 <head>
 <script>
 function myFunction1() {
-	document.getElementById("header").innerHTML = "JavaScript runing from Head";
-	document.getElementById("button").onclick = "myFunction2()";
+	document.getElementById("header").innerHTML = "JavaScript was run from Head";
+	document.getElementById("button").onclick = myFunction2;
 	document.getElementById("button").innerHTML = "run script from body";
 }
 </script>
 </head>
 <body>
 <h2 id="header">JavaScript runing from ...</h2>
-<button id="button" type="button" onclick="myFunction1()">run script from head</button>
+<button id="button" type="button" onclick=myFunction1()>run script from head</button>
 
 <script>
 function myFunction2() {
-document.getElementById("header").innerHTML = "JavaScript runing from body";
-document.getElementById("button").onclick = "myFunction3()";
+document.getElementById("header").innerHTML = "JavaScript  was run  from body";
+document.getElementById("button").onclick = myFunction3;
 document.getElementById("button").innerHTML = "run script from localExternal";
 }
 </script>
+<script src="local.js"></script>
+<script src="https://zwerd.com/js/otherDomain.js"></script>
+<script src="../otherFolder.js"></script>
 </body>
 </html> 
 
