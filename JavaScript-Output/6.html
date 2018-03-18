@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>This is calculator</h1>
+
+<p>Please type the first number</p>
+<input id="first_number" type="number" pattern='[0-9]{10}' value="">
+
+<p>Please type the second number</p>
+<input id="second_number" type="number" pattern='[0-9]{10}' value="">
+<br>
+<p>Chose operation:</p>
+
+<input type="image" src="https://cdn0.iconfinder.com/data/icons/basic-15/614/18_-_Multi_Ply-128.png" onclick="calculator('m')"/>
+<input type="image" src="https://cdn1.iconfinder.com/data/icons/lightly-selected/30/divide-120.png" onclick="calculator('d')"/>
+<input type="image" src="https://cdn3.iconfinder.com/data/icons/glypho-generic-icons/64/plus-big-128.png" onclick="calculator('a')"/>
+<input type="image" src="https://cdn3.iconfinder.com/data/icons/glypho-generic-icons/64/minus-big-128.png" onclick="calculator('s')"/>
+
+<h3>Answer is:</h3>
+<p id="answer" style="font-size:245%;"></p>
+<script>
+
+function calculator(value) {
+	var first_number = parseInt(document.getElementById("first_number").value);
+	var second_number = parseInt(document.getElementById("second_number").value);
+	var calculation_methods = document.getElementByI
+
+
+	if (value === "m") {
+	var answer = first_number * second_number;
+	console.log(first_number * second_number);
+	} else if (value === "d") {
+	var answer = first_number / second_number;
+	console.log(first_number / second_number);
+	} else if (value === "a") {
+	var answer = first_number + second_number;
+	console.log(first_number + second_number);
+	} else if (value === "s") {
+	var answer = first_number - second_number;
+	console.log(first_number - second_number);
+	}
+	document.getElementById("answer").innerHTML = answer;
+
+}
+
+</script>
+
+</body>
+</html>
