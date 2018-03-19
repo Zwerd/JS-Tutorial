@@ -10,13 +10,13 @@
 <h2>JavaScript Game</h2>
 
 <p style="font-size:150%">Please choose number between 1 to 100 and click on start</p>
-<button onclick="guess(50)">Start</button>
+<button onclick="guess()">Start</button>
 
 <p id="guess" style="font-size:150%"></p>
 <p id="button"></p>
 
 <script>
-function guess(guessNumber) {
+function guess() {
   document.getElementById('guess').innerHTML =
     'Is your number is ' + guessNumber + '?'
   document.getElementById('button').innerHTML =
