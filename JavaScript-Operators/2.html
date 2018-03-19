@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+	<script type="text/javascript">
+	var guessNumber = 50
+</script>
+</head>
+<h2>JavaScript Game</h2>
+<p style="font-size:140%">Please choose number between 1 to 100 and click on start</p>
+<p style="font-size:125%">Is your number is <b id="guess"></b>?</p>
+<button onclick="guessAgain('lower')">Lower</button>
+<button onclick="guessAgain('bigger')">Bigger</button>
+<button onclick="guessAgain('yes')">Yes</button>
+
+<script>
+var guessNumber = 50
+document.getElementById('guess').innerHTML = guessNumber
+
+function guessAgain(value) {
+  if (value === 'lower') {
+    guessNumber = guessNumber - guessNumber / 2
+    document.getElementById('guess').innerHTML = guessNumber
+  } else {
+    guessNumber = guessNumber + guessNumber / 2
+    document.getElementById('guess').innerHTML = guessNumber
+  }
+}
+</script>
+
+</body>
+</html>
