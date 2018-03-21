@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript first letter is uppercase</h1>
+
+<input id="text" type="text" placeholder="Type your sentence...">
+</input>
+<button onclick="fixing()">fix it for me</button>
+<script>
+function upper(word){
+	var abc = "abcdefghijklmnopqrstuvwxyz"
+	var ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	var newWord = ''
+	for (i=0;i<=word.length;i++){
+		letter = word[i]
+		if(i==0){
+			letter = ABC[abc.indexOf(letter)]
+			console.log(letter)
+			newWord += letter
+		}else if(letter in ABC){
+			letter = abc[ABC.indexOf(letter)]
+			console.log(letter)
+			newWord += letter
+		}else{
+			console.log(letter)
+			newWord += letter			
+		}
+	}return newWord;console.log(newWord)
+	
+}
+
+function fixing(){
+	var sentence = document.getElementById("text").value
+	var words = []
+	var word = ''
+	for (i=0;i <= sentence.length;i++){
+		if (sentence[i]==" " || i==sentence.length){
+			words.push(word)
+			console.log(words)
+			word = ''
+		}else{
+			word +=  sentence[i]
+			console.log(word)
+}
+}
+}
+
+</script>
+
+</body>
+</html>
+
+
+

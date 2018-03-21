@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = 16 + "Volvo";
+document.getElementById("demo").innerHTML = x;
+
+var x = 16 + 4 + "Volvo";
+console.log(x)
+
+var x = "Volvo" + 16 + 4;
+console.log(x)
+
+var answer = "It's alright";             // Single quote inside double quotes
+console.log(answer)
+var answer = "He is called 'Johnny'";    // Single quotes inside double quotes
+console.log(answer)
+var answer = 'He is called "Johnny"';    // Double quotes inside single quotes
+
+var x1 = 34.00;     // Written with decimals
+console.log(typeof x1)
+var x2 = 34;        // Written without decimals
+console.log(typeof x2)
+
+var y = 123e5;      // 12300000
+var z = 123e-5;     // 0.00123
+console.log(z)
+
+var x = 5;
+var y = 5;
+var z = 6;
+console.log(x == y)       // Returns true
+(x == z)       // Returns false
+
+//JavaScript Arrays
+var cars = ["Saab", "Volvo", "BMW"];
+
+
+//JavaScript Objects
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+//The typeof Operator
+typeof ""                  // Returns "string"
+typeof "John"              // Returns "string"
+typeof "John Doe"          // Returns "string"
+
+typeof 0                   // Returns "number"
+typeof 314                 // Returns "number"
+typeof 3.14                // Returns "number"
+typeof (3)                 // Returns "number"
+typeof (3 + 4)             // Returns "number"
+
+
+//Undefined
+var car;                // Value is undefined, type is undefined
+car = undefined;        // Value is undefined, type is undefined
+
+
+//Empty Values
+var car = "";              // The value is "", the typeof is "string"
+
+//Null
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+person = null;        // Now value is null, but type is still an object
+
+//Difference Between Undefined and Null
+typeof undefined           // undefined
+typeof null                // object
+
+null === undefined         // false
+null == undefined          // true
+
+
+//Primitive Data
+typeof "John"              // Returns "string" 
+typeof 3.14                // Returns "number"
+typeof true                // Returns "boolean"
+typeof false               // Returns "boolean"
+typeof x                   // Returns "undefined" (if x has no value)
+
+
+//Complex Data
+typeof {name:'John', age:34} // Returns "object"
+typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+typeof null                  // Returns "object"
+typeof function myFunc(){}   // Returns "function"
+
+
+
+
+
+</script>
+
+</body>
+</html>

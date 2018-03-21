@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <button
+    id="back"
+    type="button"
+    name="button"
+    onclick="back()"
+    style="font-size:150%"
+    >
+    Back
+  </button>
+  <br>
+      <img
+      id="docImages"
+      src="file:///home/guy/gits/zwerd.com/zwerd.github.io/images/CAM02613.jpg"
+      alt=""
+      style="height: 300px; ">
+  <br>
+    <button
+    id="next"
+    type="button"
+    name="button"
+    onclick="next()"
+    style="font-size:150%"
+    >
+    Next
+  </button>
+  <script type="text/javascript">
+  var images = ['CAM02613.jpg', '1 004.jpg', 'IMG_0006.JPG', '07052014995-1.jpg']
+var num = 0
+var sourceURL = 'file:///home/guy/gits/zwerd.com/zwerd.github.io/images/'
+
+function back() {
+  num -= 1
+  if (num == -1) {
+    num = 3
+  }
+  docImages = sourceURL + images[num]
+  document.getElementById('docImages').src = docImages
+}
+function next() {
+  num += 1
+  console.log(num)
+  if (num == 4) {
+    console.log('in if of next func')
+    num = 0
+  }
+  docImages = sourceURL + images[num]
+  document.getElementById('docImages').src = docImages
+}
+</script>
+  </body>
+
+</html>
