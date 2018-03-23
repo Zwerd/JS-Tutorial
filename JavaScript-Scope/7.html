@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript first letter is uppercase</h1>
+
+<input id="text" type="text" placeholder="Type your sentence...">
+</input>
+<button onclick="fixing()">fix it for me</button>
+<p id="fix" style="font-size:150%"></p>
+<script>
+function capitalize_Words(str) {
+  return str.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+  })
+}
+
+function fixing() {
+  document.getElementById('fix').innerHTML = capitalize_Words(
+    document.getElementById('text').value
+  )
+}
+</script>
+
+</body>
+</html>

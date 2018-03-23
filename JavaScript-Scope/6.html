@@ -12,19 +12,17 @@
 function make_words_with_uppercase(array) {
   var upper_case_arr = []
   for (var i = 0; i < array.length; i++) {
-    letter = array[i][0].toUpperCase()
-    word = array[i].substring(1).toLowerCase()
-    upper_case_arr.push(letter + word) //this push the words with uppercase first letter to the array
+    upper_case_arr.push(
+      array[i][0].toUpperCase() + array[i].substring(1).toLowerCase()
+    ) //this push the words with uppercase first letter to the array
   }
   return upper_case_arr
 }
 
 function fixing() {
-  var text = document.getElementById('text').value
-  var arr = text.split(' ')
-  var newArray = make_words_with_uppercase(arr)
-  var newString = newArray.join(' ')
-  document.getElementById('fix').innerHTML = newString
+  document.getElementById('fix').innerHTML = make_words_with_uppercase(
+    document.getElementById('text').value.split(' ')
+  ).join(' ')
 }
 </script>
 
