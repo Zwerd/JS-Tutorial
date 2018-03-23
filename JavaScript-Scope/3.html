@@ -30,6 +30,20 @@ function upper(word) {
   }
   return newWord
 }
+function string_to_arr(string) {
+  var words = []
+  var word = ''
+  for (var i = 0; i < string.length; i++) {
+    if (string[i] == ' ') {
+      words.push(word)
+      word = ''
+    } else {
+      word += string[i]
+    }
+  }
+  words.push(word)
+  return words
+}
 
 function arr_to_string(array) {
   newString = ''
@@ -40,23 +54,20 @@ function arr_to_string(array) {
   return newString
 }
 
-function fixing() {
-  var sentence = document.getElementById('text').value
-  var words = []
-  var word = ''
-  for (var i = 0; i < sentence.length; i++) {
-    console.log('in for lop', i)
-    if (sentence[i] == ' ') {
-      words.push(upper(word))
-      word = ''
-    } else {
-      word += sentence[i]
-    }
+function make_words_with_uppercase(array) {
+  var upper_case_arr = []
+  for (var i = 0; i < array.length; i++) {
+    upper_case_arr.push(upper(array[i])) //this push the words with uppercase first letter to the array
   }
-  words.push(upper(word))
-  console.log(words)
-  fix = arr_to_string(words)
-  document.getElementById('fix').innerHTML = fix
+  return upper_case_arr
+}
+
+function fixing() {
+  var text = document.getElementById('text').value
+  var arr = string_to_arr(text)
+  var newArray = make_words_with_uppercase(arr)
+  var newString = arr_to_string(newArray)
+  document.getElementById('fix').innerHTML = newString
 }
 </script>
 
