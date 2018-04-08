@@ -1,0 +1,41 @@
+<script type="text/javascript">
+//Changing Elements
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits[0] = 'Kiwi' // Changes the first element of fruits to "Kiwi"
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits[fruits.length] = 'Kiwi' // Appends "Kiwi" to fruit
+console.log(fruits)
+
+//Deleting Elements
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+delete fruits[0] // Changes the first element in fruits to undefined
+//Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+console.log(fruits)
+
+//Splicing an Array
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.splice(2, 2, 'Lemon', 'Kiwi')
+console.log(fruits)
+
+//Using splice() to Remove Elements
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.splice(0, 1) // Removes the first element of fruits
+console.log(fruits.splice(0, 1))
+
+//Merging (Concatenating) Arrays
+var myGirls = ['Cecilie', 'Lone']
+var myBoys = ['Emil', 'Tobias', 'Linus']
+var myChildren = myGirls.concat(myBoys) // Concatenates (joins) myGirls and myBoys
+console.log(myChildren)
+
+var arr1 = ['Cecilie', 'Lone']
+var arr2 = ['Emil', 'Tobias', 'Linus']
+var arr3 = ['Robin', 'Morgan']
+var myChildren = arr1.concat(arr2, arr3) // Concatenates arr1 with arr2 and arr3
+console.log(myChildren)
+
+var arr1 = ['Cecilie', 'Lone']
+var myChildren = arr1.concat(['Emil', 'Tobias', 'Linus'])
+console.log(myChildren)
+</script>

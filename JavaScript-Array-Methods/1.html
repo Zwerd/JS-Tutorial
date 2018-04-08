@@ -1,0 +1,44 @@
+<p id="demo"></p>
+<p id="demo1"></p>
+<script type="text/javascript">
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+console.log(fruits)
+console.log(fruits.toString())
+document.getElementById('demo').innerHTML = fruits.toString()
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango2']
+console.log(fruits.join(', '))
+document.getElementById('demo').innerHTML = fruits.join(' * ')
+
+//Popping and Pushing
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+console.log(fruits)
+console.log(fruits.pop(), '2') // Removes the last element ("Mango") from fruits
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+var x = fruits.pop() // the value of x is "Mango"
+
+//Pushing
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.push('Kiwi') //  Adds a new element ("Kiwi") to fruits
+console.log(fruits)
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+var x = fruits.push('Kiwi') //  the value of x is 5
+console.log(fruits.push('Kiwi'))
+console.log(fruits)
+
+//Shifting Elements
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.shift() // Removes the first element "Banana" from fruits
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+console.log(fruits.shift())
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.unshift('Lemon') // Adds a new element "Lemon" to fruits
+console.log(fruits.unshift('Lemon'))
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+console.log(fruits.unshift('Lemon')) // Returns 5
+</script>

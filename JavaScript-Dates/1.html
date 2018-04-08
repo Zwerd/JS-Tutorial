@@ -1,0 +1,27 @@
+<p id="demo"></p>
+
+<script type="text/javascript">
+//JavaScript Date Formats
+console.log(Number(new Date()))
+
+//Creating Date Objects
+new Date()
+new Date(209384028304)
+new Date(99, 10, 4)
+new Date(99, 10, 3, 12, 32, 40)
+
+new Date('October 13, 2014 11:13:00')
+new Date(100000000000)
+
+new Date(99, 5, 24, 11, 33, 30, 0)
+//JavaScript counts months from 0 to 11. January is 0. December is 11.
+
+new Date(99, 5, 24)
+
+//Displaying Dates
+//Date() and d.toString() is the same
+d = new Date()
+document.getElementById('demo').innerHTML = d.toDateString()
+d.toUTCString()
+d.toDateString()
+</script>

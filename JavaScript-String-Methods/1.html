@@ -1,0 +1,109 @@
+<script type="text/javascript">
+//String Length
+var txt = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+var sln = txt.length
+
+//Finding a String in a String
+var str = "Please locate where 'locate' occurs!"
+var pos = str.indexOf('locate')
+
+var str = "Please locate where  'locate' occurs!\ncheck"
+var pos = str.lastIndexOf('\n')
+console.log(str, pos)
+
+var str = "Please locate where 'locate' occurs!"
+var pos = str.indexOf('locate', 6)
+
+var str = "Please locate where 'locate' occurs!\n"
+var pos = str.search('\n')
+console.log(pos)
+
+//Extracting String Parts
+var str = 'Apple, Banana, Kiwi'
+var res = str.slice(7, 13)
+console.log(res)
+
+var str = 'Apple, Banana, Kiwi'
+var res = str.slice(-12, -6)
+console.log(res)
+
+var res = str.slice(7)
+console.log(res)
+
+var res = str.slice(-12)
+console.log(res)
+
+var str = 'Apple, Banana, Kiwi'
+var res = str.substring(4)
+console.log(res)
+
+var str = 'Apple, Banana, Kiwi'
+var res = str.substr(7, 6)
+console.log(res)
+
+//Replacing String Content
+str = 'Please visit Microsoft!'
+var n = str.replace('Microsoft', 'W3Schools')
+console.log(n)
+
+str = 'Please visit Microsoft and Microsoft!'
+var n = str.replace('Microsoft', 'W3Schools')
+console.log(n)
+
+str = 'Please visit Microsoft!'
+var n = str.replace('MICROSOFT', 'W3Schools')
+console.log(n)
+
+str = 'Please visit Microsoft!'
+var n = str.replace(/MICROSOFT/i, 'W3Schools')
+console.log(n)
+
+str = 'Please visit Microsoft and Microsoft!'
+var n = str.replace(/Microsoft/g, 'W3Schools')
+console.log(n)
+
+//Converting to Upper and Lower Case
+var text1 = 'Hello World!' // String
+var text2 = text1.toUpperCase() // text2 is text1 converted to upper
+console.log(text2)
+
+var text1 = 'Hello World!' // String
+var text2 = text1.toLowerCase() // text2 is text1 converted to lower
+console.log(text2)
+
+//The concat() Method
+var text1 = 'Hello'
+var text2 = 'World'
+var text3 = text1.concat(' +++ ', text2)
+console.log(text3)
+
+var text = 'Hello' + ' ' + 'World!'
+var text = 'Hello'.concat(' ++concat ', 'World!')
+console.log(text)
+
+//Extracting String Characters
+var str = 'HELLO WORLD'
+str.charAt(0) // returns H
+console.log(str.charAt(0))
+
+var str = 'HELLO WORLD'
+
+str.charCodeAt(0) // returns 72
+console.log(str.charCodeAt(0))
+
+//Accessing a String as an Array is Unsafe
+var str = 'HELLO WORLD'
+str[0] = 'G'
+str[0] // returns H
+console.log(str)
+
+//Converting a String to an Array
+var txt = 'a,b,c,d,e' // String
+txt.split(',') // Split on commas
+txt.split(' ') // Split on spaces
+txt.split('|') // Split on pipe
+
+var txt = 'HelloG' // String
+txt.split('') // Split in characters
+console.log(txt.split(''))
+</script>

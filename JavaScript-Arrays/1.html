@@ -1,0 +1,130 @@
+<p id="demo"></p>
+<p id="demo1"></p>
+<script type="text/javascript">
+var cars = ['Saab', 'Volvo', 'BMW']
+
+//example for var without array
+var car1 = 'Saab'
+var car2 = 'Volvo'
+var car3 = 'BMW'
+var cars = [car1, car2, car3]
+console.log(cars)
+
+//example of car in array
+var cars = ['Saab', 'Volvo', 'BMW']
+var cars = ['Saab', 'Volvo', 'BMW']
+var cars = new Array('Saab', 'Volvo', 'BMW')
+console.log(cars)
+//the two example are the same
+//For simplicity, readability and execution speed,
+//use the first one (the array literal method).
+
+//Access the Elements of an Array
+var name = cars[0]
+console.log(name)
+cars[0] = 'Opel'
+console.log(cars)
+
+var cars = ['Saab', 'Volvo', 'BMW']
+document.getElementById('demo1').innerHTML = cars[0]
+
+//Access the Full Array
+var cars = ['Saab', 'Volvo', 'BMW']
+document.getElementById('demo1').innerHTML = cars
+
+//Arrays are Objects
+var person = ['John', 'Doe', 46]
+var person = { firstName: 'John', lastName: 'Doe', age: 46 }
+console.log(person.firstName)
+
+//Array Elements Can Be Objects
+var myArray = []
+var myFunction = person
+var myCars = cars
+myArray[0] = Date.now
+myArray[1] = myFunction
+myArray[2] = myCars
+console.log(myArray, Date.new)
+
+var x = cars.length // The length property returns the number of elements
+var y = cars.sort() // The sort() method sorts arrays
+console.log(y)
+
+//The length Property
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.length // the length of fruits is 4
+
+//Looping Array Elements
+var fruits, text, fLen, i
+
+fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fLen = fruits.length
+text = '<ul>'
+for (i = 0; i < fLen; i++) {
+  text += '<li>' + fruits[i] + '</li>'
+}
+document.getElementById('demo1').innerHTML = text
+//Adding Array Elements
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.push('Lemon') // adds a new element (Lemon) to fruits
+console.log(fruits)
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits[fruits.length] = 'Lemon' // adds a new element (Lemon) to fruits
+fruits[6] = 'Apple'
+console.log(fruits)
+//WARNING !
+//Adding elements with high indexes can create undefined "holes" in an array:
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits[6] = 'Lemon' // adds a new element (Lemon) to fruits
+console.log(fruits)
+//Associative Arrays
+var person = []
+person[0] = 'John'
+person[1] = 'Doe'
+person[2] = 46
+var x = person.length // person.length will return 3
+var y = person[0] // person[0] will return "John"
+
+var person = []
+person['firstName'] = 'John'
+person['lastName'] = 'Doe'
+person['age'] = 46
+console.log(person)
+
+var x = person.length // person.length will return 0
+console.log(x)
+var y = person[0] // person[0] will return undefined
+console.log(person.firstName)
+
+//Avoid new Array()
+var points = new Array(40, 100, 1, 5, 25, 10) // Bad
+var points = [40, 100, 1, 5, 25, 10] // Good
+
+var points = new Array(40, 100) // Creates an array with two elements (40 and 100)
+
+var points = new Array(40) // Creates an array with 40 undefined elements !!!!!
+console.log(points)
+points = [40]
+console.log(points)
+
+//How to Recognize an Array
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+
+console.log(typeof fruits) // returns object
+//Solution 1:
+//To solve this problem ECMAScript 5 defines a new method
+console.log(Array.isArray(fruits)) // returns true
+
+//Solution 2:
+function isArray(x) {
+  return x.constructor.toString().indexOf('Array') > -1
+}
+console.log(isArray([4]))
+
+//Solution 3:
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+
+fruits instanceof string // returns true
+</script>

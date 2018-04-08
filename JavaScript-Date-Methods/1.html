@@ -1,0 +1,56 @@
+<p id="demo"></p>
+<p id="demo1"></p>
+<script type="text/javascript">
+//Date Get Methods
+var d = new Date()
+document.getElementById('demo1').innerHTML = d.getTime()
+
+var d = new Date()
+document.getElementById('demo1').innerHTML = d.getFullYear()
+
+var d = new Date()
+document.getElementById('demo1').innerHTML = d.getDay()
+var d = new Date()
+var days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday'
+]
+document.getElementById('demo1').innerHTML = days[d.getDay()]
+
+var d = new Date()
+d.setFullYear(2020, 0, 14)
+document.getElementById('demo1').innerHTML = d
+
+//setDate() sets the day of the month (1-31):
+
+var d = new Date()
+d.setDate(20)
+document.getElementById('demo1').innerHTML = d
+
+var d = new Date()
+d.setDate(d.getDate() + 50)
+document.getElementById('demo1').innerHTML = d
+
+var msec = Date.parse('March 21, 2012')
+document.getElementById('demo1').innerHTML = msec
+var msec = Date.parse('March 21, 2012')
+var d = new Date(msec)
+document.getElementById('demo1').innerHTML = d
+
+var today, someday, text
+today = new Date()
+someday = new Date()
+someday.setFullYear(2100, 0, 14)
+
+if (someday > today) {
+  text = 'Today is before January 14, 2100.'
+} else {
+  text = 'Today is after January 14, 2100.'
+}
+document.getElementById('demo').innerHTML = text
+</script>

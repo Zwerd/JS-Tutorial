@@ -1,0 +1,54 @@
+<script type="text/javascript">
+//Sorting an Array in Random Order
+var points = [40, 100, 1, 5, 25, 10]
+points.sort(function(a, b) {
+  return 0.5 - Math.random()
+})
+console.log(
+  points.sort(function(a, b) {
+    return 0.5 - Math.random()
+  })
+)
+console.log(Math.random())
+
+//Find the Highest (or Lowest) Array Value
+var points = [40, 100, 1, 5, 25, 10]
+points.sort(function(a, b) {
+  return a - b
+})
+console.log(points[points.length - 1])
+// now points[0] contains the lowest value
+// and points[points.length-1] contains the highest value
+
+var points = [40, 100, 1, 5, 25, 10]
+points.sort(function(a, b) {
+  return b - a
+})
+console.log(points)
+// now points[0] contains the highest value
+// and points[points.length-1] contains the lowest value
+
+//Using Math.max() on an Array
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr)
+}
+console.log(Math.max.apply(Math, [2, 65, 34, 1]))
+myArrayMax(points)
+
+//Using Math.min() on an Array
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr)
+}
+
+//My Min / Max JavaScript Methods
+function myArrayMax(arr) {
+  var len = arr.length
+  var max = -Infinity
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len]
+    }
+  }
+  return max
+}
+</script>

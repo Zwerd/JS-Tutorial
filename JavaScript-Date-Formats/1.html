@@ -1,0 +1,57 @@
+<script type="text/javascript">
+/*JavaScript Date Input
+ISO Date	"2015-03-25" (The International Standard)
+Short Date	"03/25/2015"
+Long Date	"Mar 25 2015" or "25 Mar 2015"
+Full Date	"Wednesday March 25 2015"
+*/
+
+//JavaScript Date Output
+//Wed Mar 25 2015 02:00:00 GMT+0200 (IST)
+
+//JavaScript ISO Dates
+/*ISO 8601 is the international standard
+ for the representation of dates and times.
+
+The ISO 8601 syntax (YYYY-MM-DD)
+ is also the preferred JavaScript date format:
+*/
+var d = new Date('2015-03-25')
+console.log(d)
+var d = new Date('2015-03')
+console.log(d)
+var d = new Date('2015')
+console.log(d)
+
+//ISO Dates (Date-Time)
+var d = new Date('2015-03-25T12:00:00Z') //Z is for UTC
+console.log(d)
+var d = new Date('2015-03-25T12:00:00-06:30')
+console.log(d)
+//Time Zones
+/*In some browsers, months or days with no leading zeroes may produce an error:
+*/
+var d = new Date('03/25/2015')
+console.log(d)
+var d = new Date('2015-3-25')
+console.log(d)
+var d = new Date('25-03-2015')
+console.log(d)
+
+//JavaScript Long Dates.
+var d = new Date('Mar 25 2015')
+console.log(d)
+var d = new Date('25 Mar 2015')
+console.log(d)
+var d = new Date('January 25 2015')
+console.log(d)
+var d = new Date('Jan 25 2015')
+var d = new Date('JANUARY, 25, 2015')
+console.log(d)
+
+//JavaScript Full Date
+var d = new Date('Wed Mar 25 2015 09:56:24 GMT+0100 (W. Europe Standard Time)')
+console.log(d)
+var d = new Date('Fri Mar 25 2015 09:56:24 GMT+0100 (Tokyo Time)')
+console.log(d)
+</script>
