@@ -1,0 +1,24 @@
+<script type="text/javascript">
+//Booleans Can be Objects
+
+var x = false
+var y = new Boolean(false)
+
+// typeof x returns boolean
+// typeof y returns object
+
+var x = false
+var y = new Boolean(false)
+
+// (x == y) is true because x and y have equal values
+
+var x = false
+var y = new Boolean(false)
+
+// (x === y) is false because x and y have different types
+
+var x = new Boolean(false)
+var y = new Boolean(false)
+
+// (x == y) is false because objects cannot be compared
+</script>
