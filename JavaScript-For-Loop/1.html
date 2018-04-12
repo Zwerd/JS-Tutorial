@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p id="demo"></p>
+
+<script>
+var cars = ['BMW', 'Volvo', 'Saab', 'Ford', 'Fiat', 'Audi']
+var text = ''
+var i
+for (i = 0; i < cars.length; i++) {
+  text += cars[i] + '<br>'
+}
+document.getElementById('demo').innerHTML = text
+
+/*
+Different Kinds of Loops
+JavaScript supports different kinds of loops:
+
+for - loops through a block of code a number of times
+for/in - loops through the properties of an object
+while - loops through a block of code while a specified condition is true
+do/while - also loops through a block of code while a specified condition is true
+*/
+
+/*
+Statement 1 is executed before the loop (the code block) starts.
+
+Statement 2 defines the condition for running the loop (the code block).
+
+Statement 3 is executed each time after the loop (the code block) has been executed.
+*/
+text = ''
+for (i = 0; i < 5; i++) {
+  text += 'The number is ' + i + '<br>'
+  console.log(text)
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<script type="text/javascript">
+//Statement 1
+var cars = ['BMW', 'Volvo', 'Saab', 'Ford', 'Fiat', 'Audi']
+for (i = 0, len = cars.length, text = ''; i < len; i++) {
+  text += cars[i] + '<br>'
+}
+
+var i = 2
+var len = cars.length
+var text = ''
+for (; i < len; i++) {
+  text += cars[i] + '<br>'
+}
+//Statement 2 ( i < len)
+//If you omit statement 2, you must provide a break
+//inside the loop. Otherwise the loop will never end.
+//This will crash your browser. Read about breaks in
+//a later chapter of this tutorial.
+
+//Statement 3
+var i = 0
+var len = cars.length
+for (; i < len; ) {
+  text += cars[i] + '<br>'
+  i++
+  console.log(text)
+}
+</script>
