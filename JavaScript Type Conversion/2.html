@@ -1,0 +1,37 @@
+<script type="text/javascript">
+//Converting Numbers to Strings
+String(x) // returns a string from a number variable x
+String(123) // returns a string from a number literal 123
+String(100 + 23) // returns a string from a number from an expression
+
+x.toString()
+;(123).toString()
+;(100 + 23).toString()
+
+//Converting Booleans to Strings
+
+String(false) // returns "false"
+String(true) // returns "true"
+
+false.toString() // returns "false"
+true.toString() // returns "true"
+
+//Converting Dates to Strings
+
+String(Date()) // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+Date().toString() // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+
+//Converting Strings to Numbers
+Number('3.14') // returns 3.14
+Number(' ') // returns 0
+Number('') // returns 0
+Number('99 88') // returns NaN
+
+//The Unary + Operator
+
+var y = '5' // y is a string
+var x = +y // x is a number
+
+var y = 'John' // y is a string
+var x = +y // x is a number (NaN)
+</script>

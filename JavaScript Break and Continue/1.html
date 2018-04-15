@@ -1,0 +1,36 @@
+<script type="text/javascript">
+//The Break Statement
+text = ''
+for (i = 0; i < 10; i++) {
+  if (i === 3) {
+    break
+  }
+  text += 'The number is ' + i + '<br>'
+}
+
+//The Continue Statement
+for (i = 0; i < 10; i++) {
+  if (i === 3) {
+    console.log('in IF', i)
+    continue
+  }
+  text += 'The number is ' + i + '<br>'
+  console.log(i)
+}
+//JavaScript Labels
+//label:
+//statements
+text = ''
+var cars = ['BMW', 'Volvo', 'Saab', 'Ford']
+Guy: {
+  text += cars[0] + '<br>'
+  text += cars[1] + '<br>'
+  text += cars[2] + '<br>'
+  console.log(text)
+  break Guy
+  text += cars[3] + '<br>'
+  console.log(text)
+  text += cars[4] + '<br>'
+  text += cars[5] + '<br>'
+}
+</script>
