@@ -1,0 +1,32 @@
+<script type="text/javascript">
+//What Is a Regular Expression?
+/*
+A regular expression is a sequence of characters that forms a search pattern.
+
+When you search for data in a text, you can use this search pattern to describe what you are searching for.
+
+A regular expression can be a single character, or a more complicated pattern.
+
+Regular expressions can be used to perform all types of text search and text replace operations.
+*/
+
+//Syntax
+
+var patt = /w3schools/i
+
+//Using String Methods
+//The search() method
+//The replace() method
+var str = 'Visit W3Schools'
+var n = str.search(/w3schools/i)
+console.log(n)
+var str = 'Visit W3Schools!'
+var n = str.search('W3Schools')
+console.log(n)
+//Use String replace() With a Regular Expression
+var str = 'Visit Microsoft!'
+var res = str.replace(/microsoft/i, 'W3Schools')
+console.log(res)
+var test =
+  'help me found the number that I need\n this is 234-987 and 543-456 that is it'
+</script>

@@ -1,0 +1,32 @@
+<p id="demo"></p>
+<script type="text/javascript">
+//The Error Object
+//Error Object Properties
+/*
+  Property	 Description
+  name	     Sets or returns an error name
+  message	   Sets or returns an error message (a string)
+  */
+
+/*
+  Error Name Values
+  Six different values can be returned by the error name property:
+
+  Error Name	             Description
+  EvalError	                  An error has occurred in the eval() function
+  RangeError	                A number "out of range" has occurred
+  ReferenceError	            An illegal reference has occurred
+  SyntaxError	                A syntax error has occurred
+  TypeError	                  A type error has occurred
+  URIError	                  An error in encodeURI() has occurred
+  */
+
+//*****An EvalError indicates an error in the eval() function.
+
+var num = 1
+try {
+  decodeURI('%%%')
+} catch (err) {
+  document.getElementById('demo').innerHTML = err.message
+}
+</script>

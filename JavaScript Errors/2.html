@@ -1,0 +1,33 @@
+<script type="text/javascript">
+//JavaScript Throws Errors
+/*
+  throw "Too big";    // throw a text
+throw 500;          // throw a number
+*/
+//If you use throw together with try and catch, you can control program flow and generate custom error messages.
+
+//<input id="demo" type="number" min="5" max="10" step="1"????
+</script>
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="number" min="5" max="10" step="1">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="message"></p>
+
+<script>
+function myFunction() {
+  var message, x
+  message = document.getElementById('message')
+  message.innerHTML = ''
+  x = document.getElementById('demo').value
+  try {
+    if (x == '') throw 'empty'
+    if (isNaN(x)) throw 'not a number'
+    x = Number(x)
+    if (x < 5) throw 'too low'
+    if (x > 10) throw 'too high'
+  } catch (err) {
+    message.innerHTML = 'Input is ' + err
+  }
+}
+</script>
