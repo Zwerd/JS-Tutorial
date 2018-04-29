@@ -1,0 +1,69 @@
+<script type="text/javascript">
+//Beware of Automatic Type Conversions
+
+var x = 'Hello' // typeof x is a string
+x = 5
+
+var x = 5 + 7 // x.valueOf() is 12,  typeof x is a number
+var x = 5 + '7' // x.valueOf() is 57,  typeof x is a string
+var x = '5' + 7 // x.valueOf() is 57,  typeof x is a string
+var x = 5 - 7 // x.valueOf() is -2,  typeof x is a number
+var x = 5 - '7' // x.valueOf() is -2,  typeof x is a number
+var x = '5' - 7 // x.valueOf() is -2,  typeof x is a number
+var x = 5 - 'x' // x.valueOf() is NaN, typeof x is a number
+
+//Use === Comparison
+v\0 == "";        // true
+1 == "1";       // true
+1 == true;      // true
+
+0 === "";       // false
+1 === "1";      // false
+1 === true;     // false
+
+
+//Use Parameter Defaults
+/*
+If a function is called with a missing argument, the value of the missing argument is set to undefined.
+
+Undefined values can break your code. It is a good habit to assign default values to arguments.
+*/
+function myFunction(x, y) {
+    if (y === undefined) {
+        y = 0;
+    }
+}
+
+
+
+
+//End Your Switches with Defaults
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+        break;
+    default:
+        day = "Unknown";
+}
+
+//Avoid Using eval() - Because it allows arbitrary code to be run, it also represents a security problem.
+
+</script>

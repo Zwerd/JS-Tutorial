@@ -1,0 +1,32 @@
+<script type="text/javascript">
+//JavaScript Use Strict
+
+//The "use strict" directive is new in JavaScript 1.8.5 (ECMAScript version 5).
+/*
+Strict mode is supported in:
+IE from version 10. Firefox from version 4.
+Chrome from version 13. Safari from version 5.1.
+Opera from version 12.
+*/
+
+//Declaring Strict Mode
+
+var x
+x = 3.14 // This will cause an error because x is not declared
+
+var y
+myFunction1()
+
+function myFunction1() {
+  y = 3.14 // This will also cause an error because y is not declared
+}
+
+z = 3.14 // This will not cause an error.
+myFunction2()
+
+function myFunction2() {
+  'use strict'
+  var t
+  t = 3.14 // This will cause an error
+}
+</script>
