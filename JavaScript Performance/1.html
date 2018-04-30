@@ -1,0 +1,44 @@
+<script type="text/javascript">
+  //JavaScript Performance
+//Reduce Activity in Loops
+
+//bad
+var i;
+for (i = 0; i < arr.length; i++) {
+
+//good
+var i;
+var l = arr.length;
+for (i = 0; i < l; i++) {
+
+
+//Reduce DOM Access
+// accessing to DOM several times
+var obj;
+obj = document.getElementById("demo");
+
+
+//use variable as DOM object and get to innerHTML
+obj.innerHTML = "Hello";
+
+
+//Avoid Unnecessary Variables
+var fullName = firstName + " " + lastName;
+document.getElementById("demo").innerHTML = fullName;
+
+//insted used as follow
+document.getElementById("demo").innerHTML = firstName + " " + lastName
+
+//Delay JavaScript Loading
+// use the defer="true" in the script tag to load external js file after the html page was finish to loaded
+//If possible, you can add your script to the page by code, after the page has loaded:
+window.onload = function() {
+    var element = document.createElement("script");
+    element.src = "myScript.js";
+    document.body.appendChild(element);
+};
+
+
+
+
+</script>

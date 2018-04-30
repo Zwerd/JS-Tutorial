@@ -1,0 +1,34 @@
+<script type="text/javascript">
+//Accessing Arrays with Named Indexes
+var person = []
+person[0] = 'John'
+person[1] = 'Doe'
+person[2] = 46
+var x = person.length // person.length will return 3
+var y = person[0] // person[0] will return "John"
+
+var person = []
+person['firstName'] = 'John'
+person['lastName'] = 'Doe'
+person['age'] = 46
+var x = person.length // person.length will return 0
+var y = person[0] // person[0] will return undefined
+
+//Ending Definitions with a Comma
+person = { firstName: 'John', lastName: 'Doe', age: 46 }
+points = [40, 100, 1, 5, 25, 10]
+
+//JSON
+person = { firstName: 'John', lastName: 'Doe', age: 46 }
+points = [40, 100, 1, 5, 25, 10]
+
+//Undefined is Not Null
+if (myObj !== null && typeof myObj !== 'undefined')
+  if (typeof myObj !== 'undefined' && myObj !== null)
+    //work
+    //Expecting Block Level Scope
+    for (var i = 0; i < 10; i++) {
+      // some code
+    }
+return i
+</script>
